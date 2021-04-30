@@ -24,14 +24,13 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginBottom="25dp"
+                android:layout_marginBottom="20dp"
                 android:src="@drawable/bteb" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="@string/bteb_result"
                 android:textColor="@color/purple_dark"
@@ -91,6 +90,7 @@
                 android:layout_height="3dp"
                 app:ahp_backgroundColor="@color/white"
                 android:layout_marginTop="5dp"
+                android:indeterminate="false"
                 app:ahp_progressColor="@color/purple_dark"/>
 
             <com.google.android.material.button.MaterialButton
