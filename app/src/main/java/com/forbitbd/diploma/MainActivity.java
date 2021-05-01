@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onAdLoaded() {
                 super.onAdLoaded();
-                Log.d("YYYYYYY", "onAdLoaded Called");
             }
 
             @Override

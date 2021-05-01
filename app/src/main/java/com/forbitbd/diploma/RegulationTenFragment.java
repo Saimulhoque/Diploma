@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.text.DecimalFormat;
+
 
 public class RegulationTenFragment extends Fragment {
 
@@ -26,7 +28,8 @@ public class RegulationTenFragment extends Fragment {
     private MaterialButton GetGPA;
     private TextView result;
     double number;
-
+    DecimalFormat Formatter;
+    double sem1, sem2, sem3, sem4, sem5, sem6, sem7, sem8;
     String[] Semesters = {"1", "2", "3", "4", "5", "6", "7", "8"};
 
     public RegulationTenFragment() {
@@ -64,6 +67,7 @@ public class RegulationTenFragment extends Fragment {
 
         result = view.findViewById(R.id.cgpa);
         GetGPA = view.findViewById(R.id.btn_get);
+        Formatter = new DecimalFormat("#0.00");
 
         etsemester = view.findViewById(R.id.semester);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_dropdown_item_1line, Semesters);
@@ -162,27 +166,58 @@ public class RegulationTenFragment extends Fragment {
         GetGPA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                result.setVisibility(View.VISIBLE);
-                Double first_semister = Double.parseDouble(et_first.getText().toString().trim());
-                Double first = (first_semister) * 5;
-                Double second_semister = Double.parseDouble(et_second.getText().toString().trim());
-                Double second = (second_semister) * 5;
-                Double third_semister = Double.parseDouble(et_third.getText().toString().trim());
-                Double third = (third_semister) * 5;
-                Double forth_semister = Double.parseDouble(et_forth.getText().toString().trim());
-                Double forth = (forth_semister) * 10;
-                Double fifth_semister = Double.parseDouble(et_fifth.getText().toString().trim());
-                Double fifth = (fifth_semister) * 15;
-                Double sixth_semister = Double.parseDouble(et_sixth.getText().toString().trim());
-                Double sixth = (sixth_semister) * 20;
-                Double seventh_semister = Double.parseDouble(et_seventh.getText().toString().trim());
-                Double seventh = (seventh_semister) * 25;
-                Double eight_semister = Double.parseDouble(et_eight.getText().toString().trim());
-                Double eight = (eight_semister) * 15;
-                Double sum = (first + second + third + forth + fifth + sixth + seventh + eight) / 100;
-                String final_sum = new Double(sum).toString();
-                result.setText(final_sum);
+                if (et_first.getText().toString().isEmpty() || et_second.getText().toString().isEmpty()){
+                    Toast.makeText(getContext(), "Enter At Least Two Semester's GPA!", Toast.LENGTH_SHORT).show();
+                    et_first.setError("Enter 1st Semester!");
+                    et_first.requestFocus();
+                    et_second.setError("Enter 2nd Semester!");
+                    et_second.requestFocus();
+                }else{
+                    if (tione.getVisibility() == View.GONE) {
+                        sem1 = 0;
+                    } else {
+                        sem1 = Double.parseDouble(et_first.getText().toString().trim());
+                    }
+                    if (titwo.getVisibility() == View.GONE) {
+                        sem2 = 0;
+                    } else {
+                        sem2 = Double.parseDouble(et_second.getText().toString().trim());
+                    }
+                    if (tithree.getVisibility() == View.GONE) {
+                        sem3 = 0;
+                    } else {
+                        sem3 = Double.parseDouble(et_third.getText().toString().trim());
+                    }
+                    if (tifour.getVisibility() == View.GONE) {
+                        sem4 = 0;
+                    } else {
+                        sem4 = Double.parseDouble(et_forth.getText().toString().trim());
+                    }
+                    if (tifive.getVisibility() == View.GONE) {
+                        sem5 = 0;
+                    } else {
+                        sem5 = Double.parseDouble(et_fifth.getText().toString().trim());
+                    }
+                    if (tisix.getVisibility() == View.GONE) {
+                        sem6 = 0;
+                    } else {
+                        sem6 = Double.parseDouble(et_sixth.getText().toString().trim());
+                    }
+                    if (tiseven.getVisibility() == View.GONE) {
+                        sem7 = 0;
+                    } else {
+                        sem7 = Double.parseDouble(et_seventh.getText().toString().trim());
+                    }
+                    if (tieight.getVisibility() == View.GONE) {
+                        sem8 = 0;
+                    } else {
+                        sem8 = Double.parseDouble(et_eight.getText().toString().trim());
+                    }
 
+                    Double total = (sem1 * 5 + sem2 * 5 + sem3 * 5 + sem4 * 15 + sem5 * 15 + sem6 * 20 + sem7 * 25 + sem8 * 10) / 100;
+                    result.setText("CGPA-" + Formatter.format(total));
+                    result.setVisibility(View.VISIBLE);
+                }
             }
         });
         return view;
