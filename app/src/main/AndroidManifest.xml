@@ -3,7 +3,7 @@
     package="com.forbitbd.diploma">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
@@ -14,7 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Diploma"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CalculatorActivity"></activity>
+        <activity android:name=".LauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CalculatorActivity" />
         <activity android:name=".ActivityDev" />
 
         <meta-data
@@ -22,11 +29,7 @@
             android:value="true" />
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

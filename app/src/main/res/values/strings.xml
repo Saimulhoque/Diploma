@@ -21,7 +21,6 @@
     <string name="calculate">Calculating CGPA Depends On Every Semester GPA. Semester GPA Calculate by Grade Points and Credit. It’s Very Easy To Calculate Your CGPA From Here. You Need Your Grade or Grade Points. If You Have These Credentials, You Can Easily Calculate your CGPA From This App.</string>
 
 
-
     <string-array name="exm_year">
         <item>Select Your Exam Year</item>
         <item>2021</item>
