@@ -13,62 +13,60 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:elevation="4dp"
-            app:cardBackgroundColor="@color/purple_dark"
-            android:layout_marginBottom="10dp">
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="2dp"
+            app:endIconMode="dropdown_menu">
 
-            <LinearLayout
+            <AutoCompleteTextView
+                android:id="@+id/semester"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:background="@color/white">
-                <TextView
-                    android:gravity="center"
-                    android:textSize="40sp"
-                    android:textStyle="bold"
-                    android:id="@+id/cgpa"
-                    android:textColor="@color/black"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"/>
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:hint="Select No. Of Semester"
+                android:inputType="none"
+                android:textColor="@color/black" />
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
                 android:hint="1st Semester"
-                app:boxStrokeWidth="2dp"
-                android:layout_marginRight="3dp">
+                android:visibility="gone"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/first"
                     style="@style/caleditext" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input2"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_weight="1"
                 android:hint="2nd Semester"
-                app:boxStrokeWidth="2dp"
-                android:layout_marginLeft="3dp">
+                android:visibility="gone"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/second"
-                    style="@style/caleditext"/>
+                    style="@style/caleditext" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -79,31 +77,35 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input3"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
                 android:hint="3rd Semester"
-                app:boxStrokeWidth="2dp"
-                android:layout_marginRight="3dp">
+                android:visibility="gone"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/third"
-                    style="@style/caleditext"/>
+                    style="@style/caleditext" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input4"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_weight="1"
                 android:hint="4th Semester"
-                app:boxStrokeWidth="2dp"
-                android:layout_marginLeft="3dp">
+                android:visibility="gone"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/forth"
-                    style="@style/caleditext"/>
+                    style="@style/caleditext" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -114,13 +116,15 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input5"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
                 android:hint="5th Semester"
-                app:boxStrokeWidth="2dp"
-                android:layout_marginRight="3dp">
+                android:visibility="gone"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fifth"
@@ -128,14 +132,17 @@
 
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input6"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_weight="1"
                 android:hint="6th Semester"
-                app:boxStrokeWidth="2dp"
-                android:layout_marginLeft="3dp">
+                android:visibility="gone"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/sixth"
@@ -147,44 +154,62 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input7"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
                 android:hint="7th Semester"
-                app:boxStrokeWidth="2dp"
-                android:layout_marginRight="3dp">
+                android:visibility="gone"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/seventh"
                     style="@style/caleditext" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input8"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_weight="1"
                 android:hint="8th Semester"
-                app:boxStrokeWidth="2dp"
-                android:layout_marginLeft="3dp">
+                android:visibility="gone"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/eighth"
-                    style="@style/caleditext"/>
+                    style="@style/caleditext" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/cgpa"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_get"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
             android:layout_marginTop="20dp"
-            android:background="@color/purple_dark"
+            android:background="@color/purple_500"
             android:text="Get CGPA"
-            android:textSize="17sp"
-            android:layout_marginLeft="3dp"/>
+            android:textSize="17sp" />
 
     </LinearLayout>
 
