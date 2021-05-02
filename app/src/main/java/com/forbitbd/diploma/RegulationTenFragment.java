@@ -82,7 +82,7 @@ public class RegulationTenFragment extends Fragment {
                 } else {
                     number = Double.parseDouble(etsemester.getText().toString().trim());
                     if (number == 1) {
-                        Toast.makeText(getContext(), "Atleast 2 Semester Required!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "At least 2 Semester Required!", Toast.LENGTH_SHORT).show();
                     }
                     if (number == 2) {
                         GetGPA.setVisibility(View.VISIBLE);

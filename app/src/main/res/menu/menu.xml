@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bookprice"
+        app:showAsAction="never"
+        android:title="Book Price (All)" />
+    <item
+        android:id="@+id/googleplay"
+        app:showAsAction="never"
+        android:title="Go To Google Play" />
+    <item
+        android:id="@+id/share"
+        app:showAsAction="never"
+        android:title="Share"/>
+    <item
+        android:id="@+id/developer"
+        app:showAsAction="never"
+        android:title="Developer Team"/>
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"
+        app:showAsAction="never"/>
+</menu>

@@ -1,4 +1,5 @@
 package com.forbitbd.diploma;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +11,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -21,6 +25,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 
 import org.jetbrains.annotations.NotNull;
@@ -34,23 +39,27 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, MyListener {
 
     private EditText roll;
-    private MaterialButton btn,btndev,btncalculator;
+    private MaterialButton btn,btncalculator;
     private AutoCompleteTextView semester, year;
     private InterstitialAd mInterstitialAd;
     private AnimateHorizontalProgressBar progressBar;
     private Handler handler = new Handler();
     private int a = 0;
+    private MaterialToolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.inflateMenu(R.menu.menu);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         progressBar = findViewById(R.id.progressbar);
         btncalculator = findViewById(R.id.calculator);
         btncalculator.setOnClickListener(this);
-        btndev = findViewById(R.id.developer);
-        btndev.setOnClickListener(this);
 
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-5474497946967422/7341540413");
@@ -100,12 +109,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         android.net.NetworkInfo wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-        android.net.NetworkInfo datac = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        android.net.NetworkInfo data = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 
         int id = view.getId();
         if (id == R.id.btn){
-            if ((wifi != null & datac != null)
-                    && (wifi.isConnected() | datac.isConnected())) {
+            if ((wifi != null & data != null) && (wifi.isConnected() | data.isConnected())) {
             }else{
                 Toast toast = Toast.makeText(MainActivity.this, "No Internet Connection!", Toast.LENGTH_LONG);
                 toast.show();
@@ -166,13 +174,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
             });
-        } else if (id == R.id.developer){
-            Intent intent = new Intent(MainActivity.this,ActivityDev.class);
-            startActivity(intent);
         }else if (id == R.id.calculator){
             Intent intent = new Intent(MainActivity.this,CalculatorActivity.class);
             startActivity(intent);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==R.id.developer){
+            Intent intent = new Intent(MainActivity.this,ActivityDev.class);
+            startActivity(intent);
+            return true;
+        }else if (item.getItemId()==R.id.share){
+            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.forbitbd.diploma");
+            startActivity(Intent.createChooser(sharingIntent, "BTEB Result"));
+            return true;
+        }else if (item.getItemId()==R.id.bookprice){
+            Intent intent = new Intent(MainActivity.this,BookPriceActivity.class);
+            startActivity(intent);
+            return true;
+        }else if (item.getItemId()==R.id.googleplay){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.forbitbd.diploma"));
+            startActivity(intent);
+            return true;
+        }else if (item.getItemId()==R.id.exit){
+            finishAffinity();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -186,4 +226,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mInterstitialAd.show();
         }
     }
+
+
+//    else if (view == clear) {
+//        this.sudokuView.setValue(0);
+//    }
 }
