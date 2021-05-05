@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -28,6 +30,7 @@ public class RegulationSixteenFragment extends Fragment {
     private MaterialButton GetGPA;
     private TextView result;
     double number;
+    Animation fadein,fadeout;
     DecimalFormat Formatter;
     double sem1, sem2, sem3, sem4, sem5, sem6, sem7, sem8;
     String[] Semesters = {"1", "2", "3", "4", "5", "6", "7", "8"};
@@ -48,6 +51,9 @@ public class RegulationSixteenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sixteen_regulation, container, false);
+
+        fadein = AnimationUtils.loadAnimation(getContext(),R.anim.fadein_animation);
+        fadeout = AnimationUtils.loadAnimation(getContext(),R.anim.fadeout_animation);
 
         tione = view.findViewById(R.id.input1);
         titwo = view.findViewById(R.id.input2);
@@ -219,6 +225,7 @@ public class RegulationSixteenFragment extends Fragment {
                     Double total = (sem1 * 5 + sem2 * 5 + sem3 * 5 + sem4 * 10 + sem5 * 15 + sem6 * 20 + sem7 * 25 + sem8 * 15) / 100;
                     result.setText("CGPA-" + Formatter.format(total));
                     result.setVisibility(View.VISIBLE);
+                    result.startAnimation(fadein);
                 }
             }
         });

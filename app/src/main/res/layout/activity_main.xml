@@ -93,7 +93,6 @@
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                app:ahp_backgroundColor="@color/white"
                 android:layout_marginTop="5dp"
                 android:indeterminate="false"
                 app:ahp_progressColor="@color/purple_dark"/>

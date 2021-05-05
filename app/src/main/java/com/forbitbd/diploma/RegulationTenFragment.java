@@ -224,6 +224,7 @@ public class RegulationTenFragment extends Fragment {
                     Double total = (sem1 * 5 + sem2 * 5 + sem3 * 5 + sem4 * 15 + sem5 * 15 + sem6 * 20 + sem7 * 25 + sem8 * 10) / 100;
                     result.setText("CGPA-" + Formatter.format(total));
                     result.setVisibility(View.VISIBLE);
+                    result.startAnimation(fadein);
                 }
             }
         });
