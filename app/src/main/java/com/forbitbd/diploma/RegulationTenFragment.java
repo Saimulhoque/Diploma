@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -19,7 +21,6 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.text.DecimalFormat;
 
-
 public class RegulationTenFragment extends Fragment {
 
     AutoCompleteTextView etsemester;
@@ -29,6 +30,7 @@ public class RegulationTenFragment extends Fragment {
     private TextView result;
     double number;
     DecimalFormat Formatter;
+    Animation fadein,fadeout;
     double sem1, sem2, sem3, sem4, sem5, sem6, sem7, sem8;
     String[] Semesters = {"1", "2", "3", "4", "5", "6", "7", "8"};
 
@@ -46,6 +48,9 @@ public class RegulationTenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ten_regulation, container, false);
+
+        fadein = AnimationUtils.loadAnimation(getContext(),R.anim.fadein_animation);
+        fadeout = AnimationUtils.loadAnimation(getContext(),R.anim.fadeout_animation);
 
         tione = view.findViewById(R.id.input1);
         titwo = view.findViewById(R.id.input2);
@@ -97,6 +102,8 @@ public class RegulationTenFragment extends Fragment {
                     }
                     if (number == 3) {
                         GetGPA.setVisibility(View.VISIBLE);
+                        tione.setVisibility(View.VISIBLE);
+                        titwo.setVisibility(View.VISIBLE);
                         tithree.setVisibility(View.VISIBLE);
                         tifour.setVisibility(View.GONE);
                         tifive.setVisibility(View.GONE);

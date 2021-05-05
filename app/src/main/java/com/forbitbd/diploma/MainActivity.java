@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
@@ -189,7 +191,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId()==R.id.developer){
+        if (item.getItemId()==R.id.polytechnic){
+            Intent intent = new Intent(MainActivity.this,PolytechnicActivty.class);
+            startActivity(intent);
+        }else if (item.getItemId()==R.id.developer){
             Intent intent = new Intent(MainActivity.this,ActivityDev.class);
             startActivity(intent);
             return true;
@@ -226,9 +231,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mInterstitialAd.show();
         }
     }
-
-
-//    else if (view == clear) {
-//        this.sudokuView.setValue(0);
-//    }
 }

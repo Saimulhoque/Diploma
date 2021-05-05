@@ -67,7 +67,9 @@ dependencies {
     //for gif image//
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
 
+    //horizontal progressbar in mainactivity//
     implementation 'com.daasuu:animateHorizontalProgressBar:0.2.4'
 
+    //autotype textview in launcher activity//
     implementation 'com.krsticdragan:autotypetextview:1.1'
 }

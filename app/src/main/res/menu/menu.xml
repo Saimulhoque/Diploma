@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/polytechnic"
+        app:showAsAction="never"
+        android:title="Polytechnic Info" />
+<!--    <item-->
+<!--        android:id="@+id/booklist"-->
+<!--        app:showAsAction="never"-->
+<!--        android:title="Book List" />-->
+    <item
         android:id="@+id/bookprice"
         app:showAsAction="never"
         android:title="Book Price (All)" />

@@ -12,6 +12,8 @@ import androidx.fragment.app.DialogFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
@@ -22,7 +24,6 @@ public class Dialoge_fragment extends DialogFragment {
 
     private TextView tvone,sem,year,roll;
     private MaterialButton btncancel;
-    private ImageView pass, fail;
     private MyListener listener;
 
     public Dialoge_fragment() {

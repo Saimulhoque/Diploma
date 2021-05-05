@@ -14,8 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Diploma"
         android:usesCleartextTraffic="true">
-        <activity android:name=".BookPriceActivity"></activity>
-        <activity android:name=".LauncherActivity"></activity>
+        <activity android:name=".PolytechnicActivty"></activity>
+        <activity android:name=".BookPriceActivity" />
+        <activity android:name=".LauncherActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".CalculatorActivity" />
         <activity android:name=".ActivityDev" />
 
@@ -24,11 +31,7 @@
             android:value="true" />
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

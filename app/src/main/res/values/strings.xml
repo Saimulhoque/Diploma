@@ -19,8 +19,7 @@
     <string name="when_bteb_bangladesh_technical_education_board_will_publish_the_result_you_can_easily_get_your_result_from_here">When BTEB (Bangladesh Technical Education Board) Will Publish The Result, You Can Easily Get Your Result From Here</string>
     <string name="bteb_result">BTEB RESULT</string>
     <string name="calculate">Calculating CGPA Depends On Every Semester GPA. Semester GPA Calculate by Grade Points and Credit. It’s Very Easy To Calculate Your CGPA From Here. You Need Your Grade or Grade Points. If You Have These Credentials, You Can Easily Calculate your CGPA From This App.</string>
-    <string name="all_semester_book_price"><u>All Technology Book Price</u></string>
-
+    <string name="all_semester_book_price">Select Your Technology To Know The Prices Of Your Books </string>
 
     <string-array name="exm_year">
         <item>Select Your Exam Year</item>
@@ -42,8 +41,20 @@
 
     <string-array name="technology">
         <item>Select Your Technology</item>
-        <item>Computer</item>
+        <item>Civil</item>
         <item>Electrical</item>
+        <item>Mechanical</item>
+        <item>Computer</item>
+        <item>Electronics</item>
+        <item>Power</item>
+        <item>Automobile</item>
+        <item>Architecture</item>
+        <item>Construction</item>
+        <item>Environment</item>
+        <item>Telecommunication</item>
+        <item>Marine</item>
+        <item>Textile</item>
+        <item>Garments</item>
     </string-array>
 
 </resources>
