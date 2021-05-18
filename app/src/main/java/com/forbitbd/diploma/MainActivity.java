@@ -122,15 +122,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             String broll = roll.getText().toString();
-            if (broll.equals("")) {
-                roll.setError("Enter Your Board Roll");
+            if (roll.getText().toString().isEmpty() || semester.getText().toString().isEmpty() || year.getText().toString().isEmpty()){
+                roll.setError("Enter Your Board Roll!");
                 roll.requestFocus();
+                semester.requestFocus();
+                year.requestFocus();
             }
             String sem = semester.getText().toString();
             String byear = year.getText().toString();
-            progressBar.setVisibility(View.VISIBLE);
-            progressBar.setProgressWithAnim(90);
-            progressBar.setMaxWithAnim(100);
+
             Uri.Builder builder = new Uri.Builder();
             builder.scheme("http")
                     .authority("project.riajtech.com")
@@ -176,6 +176,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
             });
+            progressBar.setVisibility(View.VISIBLE);
+            progressBar.setProgressWithAnim(90);
+            progressBar.setMaxWithAnim(100);
+
         }else if (id == R.id.calculator){
             Intent intent = new Intent(MainActivity.this,CalculatorActivity.class);
             startActivity(intent);
