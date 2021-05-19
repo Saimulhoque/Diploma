@@ -9,11 +9,6 @@
     android:orientation="vertical"
     android:forceDarkAllowed="false">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar"/>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,97 +17,108 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/bteb" />
-
-            <TextView
+            <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:id="@+id/toolbar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/bteb_result"
-                android:textColor="@color/purple_dark"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/bteb" />
 
-            <TextView
-                android:text="@string/when_bteb_bangladesh_technical_education_board_will_publish_the_result_you_can_easily_get_your_result_from_here"
-                style="@style/resultdesc" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_code"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_your_board_roll"
-                app:boxStrokeWidth="2dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/roll"
-                    style="@style/edittext" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:boxStrokeWidth="2dp"
-                app:endIconMode="dropdown_menu">
-
-                <AutoCompleteTextView
-                    android:id="@+id/exm_semester"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/bteb_result"
+                    android:textColor="@color/purple_dark"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:boxStrokeWidth="2dp"
-                app:endIconMode="dropdown_menu">
+                <TextView
+                    android:text="@string/when_bteb_bangladesh_technical_education_board_will_publish_the_result_you_can_easily_get_your_result_from_here"
+                    style="@style/resultdesc" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/exm_year"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_code"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none" />
+                    android:hint="@string/enter_your_board_roll"
+                    app:boxStrokeWidth="2dp">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/roll"
+                        style="@style/edittext" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.daasuu.ahp.AnimateHorizontalProgressBar
-                android:id="@+id/progressbar"
-                style="@style/progressbar_style"
-                android:visibility="gone"
-                app:ahp_progressColor="@color/purple_dark"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:boxStrokeWidth="2dp"
+                    app:endIconMode="dropdown_menu">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/black"
-                android:text="@string/get_result"
-                android:textSize="17sp" />
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/calculator"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/black"
-                android:text="Calculate Your CGPA"
-                android:textSize="17sp" />
+                    <AutoCompleteTextView
+                        android:id="@+id/exm_semester"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:boxStrokeWidth="2dp"
+                    app:endIconMode="dropdown_menu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/exm_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.daasuu.ahp.AnimateHorizontalProgressBar
+                    android:id="@+id/progressbar"
+                    style="@style/progressbar_style"
+                    android:visibility="gone"
+                    app:ahp_progressColor="@color/purple_dark"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"
+                    android:text="@string/get_result"
+                    android:textSize="17sp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/calculator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"
+                    android:text="Calculate Your CGPA"
+                    android:textSize="17sp" />
+            </LinearLayout>
 
         </LinearLayout>
 
