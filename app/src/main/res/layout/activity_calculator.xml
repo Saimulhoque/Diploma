@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalculatorActivity"
-    android:orientation="vertical">
+    tools:context=".ui.CalculatorActivity"
+    android:orientation="vertical"
+    android:background="#F1F1F1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:title="Book Price"
+        android:background="@color/white"/>
 
     <TextView
+        android:id="@+id/title"
+        android:layout_below="@id/toolbar"
         android:text="@string/calculate"
         style="@style/calculator" />
 
     <com.google.android.material.tabs.TabLayout
+        android:layout_below="@id/title"
         android:id="@+id/tabs"
         style="@style/tab_layout_style">
 
@@ -27,13 +39,12 @@
             android:text="Regulation-2010"/>
     </com.google.android.material.tabs.TabLayout>
 
-    <View
-        android:id="@+id/divider"
-        style="@style/divider" />
+
 
     <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/tabs"
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-</LinearLayout>
+</RelativeLayout>

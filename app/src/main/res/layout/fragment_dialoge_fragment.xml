@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".Dialoge_fragment"
+    tools:context=".ui.Dialoge_fragment"
     android:background="@color/purple_dark">
 
     <LinearLayout

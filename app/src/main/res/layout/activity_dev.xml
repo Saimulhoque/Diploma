@@ -5,13 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityDev">
+    tools:context=".ui.ActivityDev"
+    android:background="#F1F1F1"
+    android:padding="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="vertical">
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/forbit"
                 android:layout_width="match_parent"
@@ -104,7 +101,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
             <TextView
+                android:id="@+id/devinfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/purple_dark"
@@ -113,68 +112,9 @@
                 android:text="@string/developer_information"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/sohel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="0dp"
-                app:cardElevation="2dp"
-                android:clickable="true"
-                android:layout_marginBottom="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <ImageView
-                        android:layout_width="90dp"
-                        android:layout_gravity="center"
-                        android:layout_height="90dp"
-                        android:src="@drawable/sohel"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginStart="10dp"
-                        android:orientation="vertical"
-                        android:layout_marginTop="10dp"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:text="Mohammad Sohel"
-                            style="@style/nametext" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="3dp"
-                            android:layout_marginBottom="5dp"
-                            android:orientation="horizontal">
-
-                            <info.androidhive.fontawesome.FontTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/fa_envelope_solid"
-                                android:textColor="@color/purple_dark"
-                                android:textSize="22sp"
-                                app:solid_icon="true"/>
-
-                            <TextView
-                                android:layout_marginStart="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="riaj@gmail.com"
-                                android:layout_gravity="center_vertical"
-                                android:textSize="16sp"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                android:textStyle="bold"
+                android:layout_below="@id/forbit"
+                android:layout_marginBottom="8dp"/>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -182,7 +122,7 @@
                 app:cardCornerRadius="0dp"
                 app:cardElevation="2dp"
                 android:id="@+id/abid"
-                android:clickable="true"
+                android:layout_below="@+id/devinfo"
                 android:layout_marginBottom="10dp">
 
                 <LinearLayout
@@ -243,7 +183,7 @@
                 app:cardCornerRadius="0dp"
                 app:cardElevation="2dp"
                 android:id="@+id/saimul"
-                android:clickable="true"
+                android:layout_below="@id/abid"
                 android:layout_marginBottom="10dp">
 
                 <LinearLayout
@@ -295,9 +235,16 @@
                         </LinearLayout>
 
                     </LinearLayout>
+
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
+
+            <Button
+                android:id="@+id/moreapps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our Other Apps"
+                android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

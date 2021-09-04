@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BookPriceActivity">
+    android:background="#F1F1F1"
+    tools:context=".ui.BookPriceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:title="@string/book_price"
+        android:background="@color/white"/>
 
     <TextView
+        android:id="@+id/title"
         style="@style/bookpricetitle"
-        android:text="@string/all_semester_book_price" />
+        android:layout_below="@id/toolbar"
+        android:text="@string/all_semester_book_prices" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/autotext"
+        android:layout_below="@id/title"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,6 +43,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
+        android:layout_below="@id/autotext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -44,13 +59,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Civil Technology" />
+                    android:text="@string/civil_technology" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -75,35 +90,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -115,35 +130,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1175 Taka"/>
+                            android:text="@string/_1175_taka"/>
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1118 Taka" />
+                            android:text="@string/_1118_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1222 Taka" />
+                            android:text="@string/_1222_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1040 Taka" />
+                            android:text="@string/_1040_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1328 Taka" />
+                            android:text="@string/_1328_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1001 Taka" />
+                            android:text="@string/_1001_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="790 Taka" />
+                            android:text="@string/_790_taka" />
 
                     </LinearLayout>
 
@@ -165,13 +180,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Electrical Technology" />
+                    android:text="@string/electrical_technology" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -196,35 +211,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -236,35 +251,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1011 Taka" />
+                            android:text="@string/_1011_tak" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1297 Taka" />
+                            android:text="@string/_1297_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1169 Taka" />
+                            android:text="@string/_1169_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="931 Taka" />
+                            android:text="@string/_931_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="913 Taka" />
+                            android:text="@string/_913_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="889 Taka" />
+                            android:text="@string/_889_tak" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="865 Taka" />
+                            android:text="@string/_865_taka" />
 
                     </LinearLayout>
 
@@ -286,13 +301,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Mechanical Technology" />
+                    android:text="@string/mechanical_technology" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -317,35 +332,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -357,35 +372,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1051 Taka" />
+                            android:text="@string/_1051_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1210 Taka" />
+                            android:text="@string/_1210_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1150 Taka" />
+                            android:text="@string/_1150_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1063 Taka" />
+                            android:text="@string/_1063_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="910 Taka" />
+                            android:text="@string/_910_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="880 Taka" />
+                            android:text="@string/_880_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="735 Taka" />
+                            android:text="@string/_735_taka" />
 
                     </LinearLayout>
 
@@ -407,13 +422,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Computer Technology" />
+                    android:text="@string/computer_technology" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -438,35 +453,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -478,35 +493,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1109 Taka" />
+                            android:text="@string/_1109_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1064 Taka" />
+                            android:text="@string/_1064_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1056 Taka" />
+                            android:text="@string/_1056_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1040 Taka" />
+                            android:text="@string/_1040taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="833 Taka" />
+                            android:text="@string/_833_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="702 Taka" />
+                            android:text="@string/_702_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="546 Taka" />
+                            android:text="@string/_546_taka" />
 
                     </LinearLayout>
 
@@ -528,13 +543,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Electronics Technology" />
+                    android:text="@string/electronics_technology" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -559,35 +574,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -599,35 +614,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1105 Taka" />
+                            android:text="@string/_1105_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1105 Taka" />
+                            android:text="@string/_1105taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1092 Taka" />
+                            android:text="@string/_1092_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="970 Taka" />
+                            android:text="@string/_970_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1044 Taka" />
+                            android:text="@string/_1044_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="723 Taka" />
+                            android:text="@string/_723_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="585 Taka" />
+                            android:text="@string/_585_taka" />
 
                     </LinearLayout>
 
@@ -648,14 +663,14 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Power Technology"
+                    android:text="@string/power_technology"
                     style="@style/technologytitle" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -680,35 +695,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -720,35 +735,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="995 Taka" />
+                            android:text="@string/_995_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1025 Taka" />
+                            android:text="@string/_1025_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1248 Taka" />
+                            android:text="@string/_1248_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="957 Taka" />
+                            android:text="@string/_957_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="937 Taka" />
+                            android:text="@string/_937_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="822 Taka" />
+                            android:text="@string/_822_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="715 Taka" />
+                            android:text="@string/_715_taka" />
 
                     </LinearLayout>
 
@@ -770,13 +785,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Automobile Technology" />
+                    android:text="@string/automobile_technology" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -801,35 +816,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -841,35 +856,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1115 Taka" />
+                            android:text="@string/_1115_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1160 Taka" />
+                            android:text="@string/_1160_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1005 Taka" />
+                            android:text="@string/_1005_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1081 Taka" />
+                            android:text="@string/_1081_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="924 Taka" />
+                            android:text="@string/_924_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="885 Taka" />
+                            android:text="@string/_885_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="727 Taka" />
+                            android:text="@string/_727_taka" />
 
                     </LinearLayout>
 
@@ -891,13 +906,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Architecture Technology" />
+                    android:text="@string/architecture_technology" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -922,35 +937,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -962,35 +977,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1116 Taka" />
+                            android:text="@string/_1116_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1108 Taka" />
+                            android:text="@string/_1108_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1056 Taka" />
+                            android:text="@string/_1056_tak" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="940 Taka" />
+                            android:text="@string/_940_tak" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="950 Taka" />
+                            android:text="@string/_950_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="841 Taka" />
+                            android:text="@string/_841_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="705 Taka" />
+                            android:text="@string/_705_taka" />
 
                     </LinearLayout>
 
@@ -1012,13 +1027,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Construction Technology"/>
+                    android:text="@string/construction_technology"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -1043,35 +1058,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -1083,35 +1098,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1037 Taka" />
+                            android:text="@string/_1037_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1165 Taka" />
+                            android:text="@string/_1165_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1040 Taka" />
+                            android:text="@string/_1040_tak" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="994 Taka" />
+                            android:text="@string/_994_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1145 Taka" />
+                            android:text="@string/_1145_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1034 Taka" />
+                            android:text="@string/_1034_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="775 Taka" />
+                            android:text="@string/_775_taka" />
 
                     </LinearLayout>
 
@@ -1133,13 +1148,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Environmental Technology"/>
+                    android:text="@string/environmental_technology"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -1164,35 +1179,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -1204,35 +1219,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1113 Taka" />
+                            android:text="@string/_1113_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1104 Taka" />
+                            android:text="@string/_1104_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1046 Taka" />
+                            android:text="@string/_1046_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="917 Taka" />
+                            android:text="@string/_917_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1055 Taka" />
+                            android:text="@string/_1055_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1060 Taka" />
+                            android:text="@string/_1060_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="775 Taka" />
+                            android:text="@string/_775_tak" />
 
                     </LinearLayout>
 
@@ -1254,13 +1269,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Telecommunication Technology"/>
+                    android:text="@string/telecommunication_technology"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -1285,35 +1300,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -1325,35 +1340,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="932 Taka" />
+                            android:text="@string/_932_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1180 Taka" />
+                            android:text="@string/_1180_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1011 Taka" />
+                            android:text="@string/_1011_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="940 Taka" />
+                            android:text="@string/_940_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="774 Taka" />
+                            android:text="@string/_774_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="846 Taka" />
+                            android:text="@string/_846_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="635 Taka" />
+                            android:text="@string/_635_taka" />
 
                     </LinearLayout>
 
@@ -1375,13 +1390,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Marine Technology"/>
+                    android:text="@string/marine_technology"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -1406,35 +1421,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -1446,35 +1461,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1106 Taka" />
+                            android:text="@string/_1106_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1213 Taka" />
+                            android:text="@string/_1213_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1110 Taka" />
+                            android:text="@string/_1110_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1087 Taka" />
+                            android:text="@string/_1087_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="889 Taka" />
+                            android:text="@string/_889_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="945 Taka" />
+                            android:text="@string/_945_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="795 Taka" />
+                            android:text="@string/_795_taka" />
 
                     </LinearLayout>
 
@@ -1496,13 +1511,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Textile Technology"/>
+                    android:text="@string/textile_technology"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -1527,35 +1542,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -1567,35 +1582,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1103 Taka" />
+                            android:text="@string/_1103_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1114 Taka" />
+                            android:text="@string/_1114_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="980 Taka" />
+                            android:text="@string/_980_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="712 Taka" />
+                            android:text="@string/_712_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="775 Taka" />
+                            android:text="@string/_775taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="810 Taka" />
+                            android:text="@string/_810_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="720 Taka" />
+                            android:text="@string/_720_taka" />
 
                     </LinearLayout>
 
@@ -1617,13 +1632,13 @@
 
                 <TextView
                     style="@style/technologytitle"
-                    android:text="Garments Technology"/>
+                    android:text="@string/garments_technology"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All Semester Book Price"
+                    android:text="@string/all_semester_book_price"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -1648,35 +1663,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Semester" />
+                            android:text="@string/semester" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="First" />
+                            android:text="@string/first" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Second" />
+                            android:text="@string/second" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Third" />
+                            android:text="@string/third" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Forth" />
+                            android:text="@string/forth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Fifth" />
+                            android:text="@string/fifth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Sixth" />
+                            android:text="@string/sixth" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Seventh" />
+                            android:text="@string/seventh" />
 
                     </LinearLayout>
 
@@ -1688,35 +1703,35 @@
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="Book Price" />
+                            android:text="@string/book_price" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1129 Taka" />
+                            android:text="@string/_1129_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="959 Taka" />
+                            android:text="@string/_959_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="1054 Taka" />
+                            android:text="@string/_1054_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="735 Taka" />
+                            android:text="@string/_735taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="690 Taka" />
+                            android:text="@string/_690_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="710 Taka" />
+                            android:text="@string/_710_taka" />
 
                         <TextView
                             style="@style/sp20textsize"
-                            android:text="650 Taka" />
+                            android:text="@string/_650_taka" />
 
                     </LinearLayout>
 
@@ -1728,4 +1743,4 @@
 
     </RelativeLayout>
 
-</LinearLayout>
+</RelativeLayout>

@@ -14,25 +14,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Diploma"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PolytechnicActivty"></activity>
-        <activity android:name=".BookPriceActivity" />
-        <activity android:name=".LauncherActivity" >
+        <activity android:name=".ui.NoticeActivity"/>
+        <activity android:name=".ui.PolytechnicActivty"/>
+        <activity android:name=".ui.BookPriceActivity"/>
+        <activity android:name=".LauncherActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".CalculatorActivity" />
-        <activity android:name=".ActivityDev" />
+        <activity android:name=".ui.CalculatorActivity"/>
+        <activity android:name=".ui.ActivityDev"/>
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true" />
+            android:value="true"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.main.MainActivity"/>
 
-        </activity>
+        <service
+            android:name=".fcm.FirebaseMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_baseline_notifications_24"/>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple_dark"/>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id"/>
+
     </application>
 
 </manifest>

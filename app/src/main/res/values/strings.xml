@@ -1,13 +1,18 @@
 <resources>
     <string name="app_name">BTEB Result </string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ad_id">ca-app-pub-5474497946967422/7341540413</string>
+    <string name="test_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <string name="share_link">https://play.google.com/store/apps/details?id=com.forbitbd.diploma</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="developer_information">Developer Information</string>
     <string name="company_information">Company Information</string>
     <string name="forbit_limited">Forbit Limited</string>
     <string name="mirpur_1_dhaka_1216_bangladesh">Mirpur-1, Dhaka-1216, Bangladesh</string>
     <string name="forbit_bd_gmail_com">forbit.bd@gmail.com</string>
-    <string name="md_saimul_hoque">MD Saimul Hoque</string>
+    <string name="md_saimul_hoque">Saimul Hoque</string>
     <string name="abid_ahmed_sobhan">Abid Ahmed Sobhan</string>
     <string name="saimulhoque8214_gmail_com">saimulhoque8214@gmail.com</string>
     <string name="abidasobhan19_gmail_com">abidasobhan19@gmail.com</string>
@@ -19,7 +24,6 @@
     <string name="when_bteb_bangladesh_technical_education_board_will_publish_the_result_you_can_easily_get_your_result_from_here">When BTEB (Bangladesh Technical Education Board) Will Publish The Result, You Can Easily Get Your Result From Here</string>
     <string name="bteb_result">BTEB RESULT</string>
     <string name="calculate">Calculating CGPA Depends On Every Semester GPA. Semester GPA Calculate by Grade Points and Credit. It’s Very Easy To Calculate Your CGPA From Here. You Need Your Grade or Grade Points. If You Have These Credentials, You Can Easily Calculate your CGPA From This App.</string>
-    <string name="all_semester_book_price">Select Your Technology To Know The Prices Of Your Books </string>
 
     <string-array name="exm_year">
         <item>Select Your Exam Year</item>

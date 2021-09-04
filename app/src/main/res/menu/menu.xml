@@ -3,13 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/polytechnic"
-        app:showAsAction="never"
-        android:title="Polytechnic Info" />
+        android:id="@+id/notice"
+        app:showAsAction="always"
+        android:title="Important Notice"
+        android:icon="@drawable/ic_baseline_notifications_24"/>
+
 <!--    <item-->
 <!--        android:id="@+id/booklist"-->
 <!--        app:showAsAction="never"-->
 <!--        android:title="Book List" />-->
+
     <item
         android:id="@+id/bookprice"
         app:showAsAction="never"

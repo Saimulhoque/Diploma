@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dragankrstic.autotypetextview.AutoTypeTextView;
+import com.forbitbd.diploma.ui.main.MainActivity;
 
 public class LauncherActivity extends AppCompatActivity {
 

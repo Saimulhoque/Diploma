@@ -1,0 +1,156 @@
+<resources>
+    <string name="book_price">Book Price</string>
+    <string name="all_semester_book_prices">Select Your Technology To Know The Prices Of Your Books </string>
+    <string name="all_semester_book_price">All Semester Book Price</string>
+
+    <string name="semester">Semester</string>
+    <string name="first">First</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
+    <string name="forth">Forth</string>
+    <string name="fifth">Fifth</string>
+    <string name="sixth">Sixth</string>
+    <string name="seventh">Seventh</string>
+
+
+    <string name="civil_technology">Civil Technology</string>
+    <string name="_1175_taka">1175 Taka</string>
+    <string name="_1118_taka">1118 Taka</string>
+    <string name="_1222_taka">1222 Taka</string>
+    <string name="_1040_taka">1040 Taka</string>
+    <string name="_1328_taka">1328 Taka</string>
+    <string name="_1001_taka">1001 Taka</string>
+    <string name="_790_taka">790 Taka</string>
+
+
+    <string name="electrical_technology">Electrical Technology</string>
+    <string name="_1011_tak">1011 Taka</string>
+    <string name="_1297_taka">1297 Taka</string>
+    <string name="_1169_taka">1169 Taka</string>
+    <string name="_931_taka">931 Taka</string>
+    <string name="_913_taka">913 Taka</string>
+    <string name="_889_tak">889 Taka</string>
+    <string name="_865_taka">865 Taka</string>
+
+
+    <string name="mechanical_technology">Mechanical Technology</string>
+    <string name="_1051_taka">1051 Taka</string>
+    <string name="_1210_taka">1210 Taka</string>
+    <string name="_1150_taka">1150 Taka</string>
+    <string name="_1063_taka">1063 Taka</string>
+    <string name="_910_taka">910 Taka</string>
+    <string name="_880_taka">880 Taka</string>
+    <string name="_735_taka">735 Taka</string>
+
+
+    <string name="computer_technology">Computer Technology</string>
+    <string name="_1109_taka">1109 Taka</string>
+    <string name="_1064_taka">1064 Taka</string>
+    <string name="_1056_taka">1056 Taka</string>
+    <string name="_1040taka">1040 Taka</string>
+    <string name="_833_taka">833 Taka</string>
+    <string name="_702_taka">702 Taka</string>
+    <string name="_546_taka">546 Taka</string>
+
+
+    <string name="electronics_technology">Electronics Technology</string>
+    <string name="_1105_taka">1105 Taka</string>
+    <string name="_1105taka">1105 Taka</string>
+    <string name="_1092_taka">1092 Taka</string>
+    <string name="_970_taka">970 Taka</string>
+    <string name="_1044_taka">1044 Taka</string>
+    <string name="_723_taka">723 Taka</string>
+    <string name="_585_taka">585 Taka</string>
+
+
+    <string name="power_technology">Power Technology</string>
+    <string name="_995_taka">995 Taka</string>
+    <string name="_1025_taka">1025 Taka</string>
+    <string name="_1248_taka">1248 Taka</string>
+    <string name="_957_taka">957 Taka</string>
+    <string name="_937_taka">937 Taka</string>
+    <string name="_822_taka">822 Taka</string>
+    <string name="_715_taka">715 Taka</string>
+
+
+    <string name="automobile_technology">Automobile Technology</string>
+    <string name="_1115_taka">1115 Taka</string>
+    <string name="_1160_taka">1160 Taka</string>
+    <string name="_1005_taka">1005 Taka</string>
+    <string name="_1081_taka">1081 Taka</string>
+    <string name="_924_taka">924 Taka</string>
+    <string name="_885_taka">885 Taka</string>
+    <string name="_727_taka">727 Taka</string>
+
+
+    <string name="architecture_technology">Architecture Technology</string>
+    <string name="_1116_taka">1116 Taka</string>
+    <string name="_1108_taka">1108 Taka</string>
+    <string name="_1056_tak">1056 Taka</string>
+    <string name="_940_tak">940 Taka</string>
+    <string name="_950_taka">950 Taka</string>
+    <string name="_841_taka">841 Taka</string>
+    <string name="_705_taka">705 Taka</string>
+
+
+    <string name="construction_technology">Construction Technology</string>
+    <string name="_1037_taka">1037 Taka</string>
+    <string name="_1165_taka">1165 Taka</string>
+    <string name="_1040_tak">1040 Taka</string>
+    <string name="_994_taka">994 Taka</string>
+    <string name="_1145_taka">1145 Taka</string>
+    <string name="_1034_taka">1034 Taka</string>
+    <string name="_775_taka">775 Taka</string>
+
+
+    <string name="environmental_technology">Environmental Technology</string>
+    <string name="_1113_taka">1113 Taka</string>
+    <string name="_1104_taka">1104 Taka</string>
+    <string name="_1046_taka">1046 Taka</string>
+    <string name="_917_taka">917 Taka</string>
+    <string name="_1055_taka">1055 Taka</string>
+    <string name="_1060_taka">1060 Taka</string>
+    <string name="_775_tak">775 Taka</string>
+
+
+    <string name="telecommunication_technology">Telecommunication Technology</string>
+    <string name="_932_taka">932 Taka</string>
+    <string name="_1180_taka">1180 Taka</string>
+    <string name="_1011_taka">1011 Taka</string>
+    <string name="_940_taka">940 Taka</string>
+    <string name="_774_taka">774 Taka</string>
+    <string name="_846_taka">846 Taka</string>
+    <string name="_635_taka">635 Taka</string>
+
+
+    <string name="marine_technology">Marine Technology</string>
+    <string name="_1106_taka">1106 Taka</string>
+    <string name="_1213_taka">1213 Taka</string>
+    <string name="_1110_taka">1110 Taka</string>
+    <string name="_1087_taka">1087 Taka</string>
+    <string name="_889_taka">889 Taka</string>
+    <string name="_945_taka">945 Taka</string>
+    <string name="_795_taka">795 Taka</string>
+
+
+    <string name="textile_technology">Textile Technology</string>
+    <string name="_1103_taka">1103 Taka</string>
+    <string name="_1114_taka">1114 Taka</string>
+    <string name="_980_taka">980 Taka</string>
+    <string name="_712_taka">712 Taka</string>
+    <string name="_775taka">775 Taka</string>
+    <string name="_810_taka">810 Taka</string>
+    <string name="_720_taka">720 Taka</string>
+
+
+    <string name="garments_technology">Garments Technology</string>
+    <string name="_1129_taka">1129 Taka</string>
+    <string name="_959_taka">959 Taka</string>
+    <string name="_1054_taka">1054 Taka</string>
+    <string name="_735taka">735 Taka</string>
+    <string name="_690_taka">690 Taka</string>
+    <string name="_710_taka">710 Taka</string>
+    <string name="_650_taka">650 Taka</string>
+
+
+</resources>
